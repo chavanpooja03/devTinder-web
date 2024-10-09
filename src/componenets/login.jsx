@@ -11,7 +11,7 @@ const Login=()=>{
   const navigate=useNavigate();
   const [email,setEmailId]=useState("pujadevi789@gmail.com");
   const [password,setPassword]=useState("Suraj@999");
-
+  const [error,setError]=useState("");
   const handleLogin = async () => {
     
     try {
@@ -28,10 +28,10 @@ const Login=()=>{
     } catch (err) {
       
       if (err.response) {
-        console.log("Response error:", err.response.data);
-        console.log("Status code:", err.response.status);  // Check if it's returning a 402 here
+        setError("Response error:"+ err.response.data);
+        setError.log("Status code:"+ err.response.status);  // Check if it's returning a 402 here
       } else {
-        console.log("Request error:", err.request);
+        setError.log("Request error:"+ err.request);
       }
         
       }
@@ -69,6 +69,7 @@ const Login=()=>{
  
 </label>
 </div>
+    <p className="text-red-500">{error}</p>
     <div className="card-actions justify-center m-2">
       <button className="btn btn-primary" onClick={handleLogin}>login</button>
     </div>
