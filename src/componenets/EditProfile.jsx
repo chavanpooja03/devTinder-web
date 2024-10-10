@@ -8,7 +8,9 @@ import {BASE_URL} from "../utils/constants";
 import UserCard from "./userCard";
 const EditProfile=({user})=>{
 
- 
+  if (!user) {
+    return <div>Loading user data...</div>;  // Fallback while data is loading
+  }
 
 
 
