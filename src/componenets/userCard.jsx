@@ -1,9 +1,9 @@
 const UserCard=({user})=>{
-   const {firstname,lastname,age,gender,about}=user;
+   const {photoUrl,firstname,lastname,age,gender,about}=user;
  return (<div className="card bg-base-200 w-96 shadow-xl">
  <figure>
    <img
-     src={user.photoUrl}
+     src={photoUrl}
      alt="photo" />
  </figure>
  <div className="card-body">
