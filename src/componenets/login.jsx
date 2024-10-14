@@ -29,9 +29,9 @@ const Login=()=>{
       
       if (err.response) {
         setError("Response error:"+ err.response.data);
-        setError.log("Status code:"+ err.response.status);  // Check if it's returning a 402 here
+        setError("Status code:"+ err.response.status);  // Check if it's returning a 402 here
       } else {
-        setError.log("Request error:"+ err.request);
+        setError("Request error:"+ err.request);
       }
         
       }
